@@ -22,6 +22,12 @@ def normality_test(df, colunas):
     
     return pd.DataFrame(results, columns=["Coluna", "p_valor", "Normal?"])
 
+def cramers_v(confusion_matrix):
+    chi2 = chi2_contingency(confusion_matrix)[0]
+    n = confusion_matrix.sum()
+    min_dim = min(confusion_matrix.shape) - 1
+    return np.sqrt(chi2 / (n * min_dim))
+
 # t-student test for differences:
 def differences_test_num(grupo1, grupo2, colunas):
     results = []
