@@ -1,0 +1,15 @@
+catboost
+xgboost
+lightgbm
+transformers
+torch
+textblob
+pandas
+scipy
+scikit-learn
+seaborn
+plotly
+wordcloud
+nltk
+flair
+flask
